@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta baseada nas cores da marca Planecon (azul-petróleo / verde-água) */
+  --color-primary: #06171d;
+  --color-section-dark: #030c0f;
+  --color-mid: #56686d;
+  --color-mid-light: #8b9a9e;
+  --color-section: #e3e9ea;
+  --color-brand: #096c83;
+  --color-brand-dark: #07566a;
+  --color-accent: #12a89f;
+
+  --font-sans: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-primary);
+  color: #0b0f12;
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fade-up {
+    animation: none;
+  }
+}

@@ -1,0 +1,6 @@
+# Quebras de linha padronizadas (LF) no repositório
+* text=auto eol=lf
+*.docx binary
+*.png binary
+*.jpg binary
+*.ico binary

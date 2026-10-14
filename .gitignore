@@ -1,0 +1,43 @@
+# ===== Dependências e builds (são recriados com npm install / npm run build) =====
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ===== Segredos — NUNCA versionar (chaves da Sanity, Resend, feed de notícias...) =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ===== Hospedagem / ferramentas locais =====
+.vercel/
+.sanity/
+.claude/
+.vscode/
+.idea/
+
+# ===== Logs =====
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# ===== Sistema operacional =====
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
