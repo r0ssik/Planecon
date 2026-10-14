@@ -161,7 +161,7 @@ async function rssItems(src: NewsSource): Promise<NewsItem[]> {
           id,
           title: decodeEntities(tag(b, "title") ?? ""),
           // resumo: texto do corpo sem a imagem de capa
-          summary: excerpt(stripTags(body.replace(/<img[^>]*>/gi, ""))),
+          summary: excerpt(stripTags(body.replace(/<img[^>]*>/gi, "")).replace(/\s*(Leia mais|Continue lendo|Saiba mais)\b.*$/i, "")),
           content: full ? body : undefined,
           image: img,
           date: tag(b, "pubDate") || tag(b, "updated") || tag(b, "published") || tag(b, "dc:date"),
